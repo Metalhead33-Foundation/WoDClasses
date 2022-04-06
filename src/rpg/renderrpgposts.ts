@@ -1,6 +1,6 @@
 import { createElementAccess } from "typescript";
 import { RpgCharacterStore } from "./rpgcharacter";
-import { RpgPost } from "./rpgpost";
+import { RpgPost, convertDate } from "./rpgpost";
 import { RpgSession } from "./rpgsection";
 
 export function renderPost(document : Document, post: RpgPost, characters: RpgCharacterStore) : HTMLDivElement {
@@ -10,7 +10,7 @@ export function renderPost(document : Document, post: RpgPost, characters: RpgCh
     // Time
     var time = document.createElement('div');
     time.setAttribute('class', 'time');
-    time.innerHTML = (post.streamlinedDate) ? post.convertDate().toLocaleString("en-US") : post.date;
+    time.innerHTML = (post.streamlinedDate) ? convertDate(post).toLocaleString("en-US") : post.date;
     rootNode.append(time,'\n');
     // Content
     var contentContainer = document.createElement('div');

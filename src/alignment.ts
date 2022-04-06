@@ -1,4 +1,4 @@
-export const enum AlignmentN {
+export enum AlignmentN {
     // First two bits
     LNC_LAWFUL = 0x01,
     LNC_NEUTRAL = 0x02,
@@ -20,7 +20,7 @@ export const enum AlignmentN {
     CHAOTIC_NEUTRAL = LNC_CHAOTIC | GNE_NEUTRAL,
     CHAOTIC_EVIL = LNC_CHAOTIC | GNE_EVIL,
 }
-export const enum AlignmentS {
+export enum AlignmentS {
     "Lawful Good" = AlignmentN.LAWFUL_GOOD,
     "Lawful Neutral" = AlignmentN.LAWFUL_NEUTRAL,
     "Lawful Evil" = AlignmentN.LAWFUL_EVIL,
